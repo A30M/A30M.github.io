@@ -65,3 +65,41 @@ body {
   width: 100px;
   height: 100px;
 }
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 3s;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #ffffff22;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #ffffff66;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffffff44;
+  transform: scale(1.05);
+}
+
+.btn.danger {
+  background-color: #91000Aaa;
+  border-color: #ff4f4faa;
+}
+
+.btn.danger:hover {
+  background-color: #b20012;
+  border-color: #ff6b6baa;
+  transform: scale(1.05) rotate(-1deg);
+}
