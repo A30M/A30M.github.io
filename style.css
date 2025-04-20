@@ -105,7 +105,12 @@ body {
   background-color: #91000Aaa;
   border-color: #ff4f4faa;
 }
-
+body.banished {
+  background-color: #2a0000; /* deep blood red */
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  background-repeat: repeat;
+  animation: move-bg 30s linear infinite;
+}
 .btn.danger:hover {
    background-color: #91000Aaa;
   border-color: #ff4f4faa;
