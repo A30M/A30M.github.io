@@ -15,6 +15,10 @@ body {
 }
 
 .flask-icon {
-  width: 120px;
-  height: 120px;
+  position: fixed;
+  bottom: 20px; /* distance from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
 }
