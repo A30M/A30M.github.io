@@ -1,14 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #2b2f3e;
-  background-image: url('images/denim-bg.png');
+  background-color: #0b013b;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   background-repeat: repeat;
   background-size: auto;
-  height: 100vh;
-  overflow: hidden;
+  font-family: sans-serif;
 }
-
 .hero {
   display: flex;
   justify-content: center;
