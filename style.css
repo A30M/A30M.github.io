@@ -107,7 +107,7 @@ body {
 }
 
 .btn.danger:hover {
-  background-color: #b20012;
-  border-color: #ff6b6baa;
-  transform: scale(1.05) rotate(-1deg);
+   background-color: #91000Aaa;
+  border-color: #ff4f4faa;
+  animation: shake 0.4s infinite;
 }
