@@ -5,6 +5,9 @@ body {
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   background-repeat: repeat;
   animation: move-bg 20s linear infinite;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
 }
 
 @keyframes move-bg {
@@ -12,20 +15,29 @@ body {
     background-position: 0 0;
   }
   100% {
-    background-position: 1000px 1000px; /* Diagonal movement */
+    background-position: 1000px 1000px;
   }
 }
 
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px #000000aa;
 }
 
 .flask-icon {
   position: fixed;
-  bottom: 20px; /* distance from bottom */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   width: 100px;
