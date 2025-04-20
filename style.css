@@ -7,9 +7,10 @@ body {
   animation: move-bg 30s linear infinite;
   color: white;
   font-family: 'Special Gothic Expanded One', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
+/* Animated background movement */
 @keyframes move-bg {
   0% {
     background-position: 0 0;
@@ -18,23 +19,8 @@ body {
     background-position: 1000px 1000px;
   }
 }
-@keyframes shake {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(-3px); }
-  40% { transform: translateX(3px); }
-  60% { transform: translateX(-2px); }
-  80% { transform: translateX(2px); }
-  100% { transform: translateX(0); }
-}
-.subtitle {
-  font-size: 1.5rem;
-  color: #ccc;
-  margin-top: 10px;
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 2s;
-}
 
+/* Fade in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -46,6 +32,25 @@ body {
   }
 }
 
+/* Apply only when JS adds this class */
+.animate-on-load {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.main-title.animate-on-load {
+  animation-delay: 1s;
+}
+
+.subtitle.animate-on-load {
+  animation-delay: 2s;
+}
+
+.buttons.animate-on-load {
+  animation-delay: 3s;
+}
+
+/* Hero layout */
 .hero {
   height: 100vh;
   display: flex;
@@ -55,16 +60,22 @@ body {
   padding: 0 20px;
 }
 
+/* Main title */
 .main-title {
   font-size: 3rem;
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 5px #000000aa;
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 1s;
 }
 
+/* Subtitle */
+.subtitle {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* Flask icon */
 .flask-icon {
   position: fixed;
   bottom: 20px;
@@ -72,16 +83,16 @@ body {
   transform: translateX(-50%);
   width: 100px;
   height: 100px;
+  z-index: 1000;
 }
+
+/* Buttons */
 .buttons {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 3s;
 }
 
 .btn {
@@ -101,18 +112,33 @@ body {
   transform: scale(1.05);
 }
 
+/* BANISHED button styling */
 .btn.danger {
   background-color: #91000Aaa;
   border-color: #ff4f4faa;
+  animation: shake 0.4s infinite;
 }
+
+.btn.danger:hover {
+  background-color: #b20012;
+  border-color: #ff6b6baa;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* Shake animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-3px); }
+  40% { transform: translateX(3px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
+
+/* Banished page background override */
 body.banished {
-  background-color: #2a0000; /* deep blood red */
+  background-color: #2a0000;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   background-repeat: repeat;
   animation: move-bg 30s linear infinite;
-}
-.btn.danger:hover {
-   background-color: #91000Aaa;
-  border-color: #ff4f4faa;
-  animation: shake 0.4s infinite;
 }
