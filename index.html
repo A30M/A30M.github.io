@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>ERI</title>
+
+  <!-- Font & CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
@@ -14,6 +16,7 @@
     <div class="text-content">
       <h1 class="main-title">Experiment, result, improve.</h1>
       <p class="subtitle">Always finding improvements for subjects.</p>
+
       <div class="buttons">
         <a href="lore.html" class="btn">Lore</a>
         <a href="rules.html" class="btn">Rules</a>
@@ -22,7 +25,19 @@
       </div>
     </div>
   </div>
+
   <img src="images/flask-icon.png" alt="Flask Icon" class="flask-icon">
 
+  <!-- ✅ JS for session-aware fade-in -->
+  <script>
+    const hasVisited = sessionStorage.getItem("hasVisited");
+
+    if (!hasVisited) {
+      document.querySelector('.main-title')?.classList.add('animate-on-load');
+      document.querySelector('.subtitle')?.classList.add('animate-on-load');
+      document.querySelector('.buttons')?.classList.add('animate-on-load');
+      sessionStorage.setItem("hasVisited", "true");
+    }
+  </script>
 </body>
 </html>
